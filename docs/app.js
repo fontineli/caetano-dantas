@@ -6,7 +6,6 @@ document.documentElement.classList.add('js');
 const $ = (s, el = document) => el.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-const fmt = n => n.toLocaleString('pt-BR');
 
 const DESC = ['', 'filho', 'neto', 'bisneto', 'trineto', 'tetraneto', 'pentaneto', 'hexaneto', 'heptaneto', 'octaneto', 'eneaneto'];
 const ASC = ['', ['pai', 'mãe'], ['avô', 'avó'], ['bisavô', 'bisavó'], ['trisavô', 'trisavó'], ['tetravô', 'tetravó'], ['pentavô', 'pentavó'], ['hexavô', 'hexavó'], ['heptavô', 'heptavó']];
@@ -14,7 +13,7 @@ const fem = (w, i) => (P[i][3] === 'F' ? w.replace(/o$/, 'a') : w);
 const desc = (d, i) => fem(DESC[d] || `descendente em ${d}º grau`, i);
 const asc = (d, i) => (ASC[d] ? ASC[d][P[i][3] === 'F' ? 1 : 0] : `ascendente em ${d}º grau`);
 
-let P, PA, SP, PL, byId, names, kids, paths;
+let P, PA, SP, PL, byId, names, kids;
 
 function years(s) {
   s = (s || '').replace('Falecido(a)', '').trim();
@@ -32,10 +31,6 @@ function init() {
   names = P.map(x => norm(x[1]));
   kids = P.map(() => []);
   PA.forEach((ps, i) => Array.isArray(ps) && ps.forEach(q => kids[q].push(i)));
-  // quantos caminhos levam cada pessoa até o Caetano (primos casando com primos)
-  paths = new Float64Array(P.length);
-  const order = P.map((_, i) => i).filter(i => P[i][6] >= 0).sort((a, b) => P[a][6] - P[b][6]);
-  for (const i of order) paths[i] = P[i][6] === 0 ? 1 : parents(i).reduce((s, q) => s + paths[q], 0);
 }
 
 // ---------- busca ----------
@@ -83,18 +78,7 @@ function bindSearch(input, list, onPick) {
   });
 }
 
-// ---------- caminho e parentesco ----------
-function chain(i) {
-  const out = [i];
-  while (P[i][6] > 0) {
-    const ps = parents(i);
-    const up = ps.find(q => P[q][6] === P[i][6] - 1) ?? ps[0];
-    if (up === undefined) break;
-    out.push((i = up));
-  }
-  return out;
-}
-
+// ---------- parentesco ----------
 function ancestors(i) {
   const d = new Map([[i, 0]]);
   const q = [i];
@@ -138,33 +122,19 @@ function render(i, compareWith) {
   const box = $('#assento');
   const x = P[i];
   const meta = [years(x[2]), place(x[4]) && `nasceu em ${place(x[4])}`, place(x[5]) && `morreu em ${place(x[5])}`].filter(Boolean);
-  let html = `<h2>${esc(x[1])}</h2><p class="a-meta">${meta.map(esc).join(' ◆ ')}</p>`;
-
+  const grau = x[6] > 0 ? `${desc(x[6], i)}<br>do Caetano` : x[6] === 0 ? 'o patriarca' : 'da família<br>pelo casamento';
+  let html = `<p class="a-grau">${grau}</p><h3>${esc(x[1])}</h3><p class="a-meta">${meta.map(esc).join(' · ')}</p>`;
   if (x[6] < 0) {
     const ss = spouses(i).filter(s => P[s][6] >= 0);
-    html += `<p class="a-note">Não descende do Caetano: entrou na família pelo casamento com ${ss.map(btn).join(' e ') || 'um descendente'}.</p>`;
-  } else if (x[6] === 0) {
-    html += `<p class="a-note">O patriarca. Com Josefa de Araújo Pereira teve 21 filhos; o livro guarda ${fmt(P.filter(y => y[6] > 0).length)} descendentes dele.</p>`;
-  } else {
-    const ch = chain(i);
-    html += '<ol class="a-chain">';
-    for (let k = 1; k < ch.length; k++) {
-      const c = ch[k], other = parents(ch[k - 1]).filter(q => q !== c);
-      const extra = other.length ? ` e de ${other.map(btn).join(' e ')}` : '';
-      html += k === ch.length - 1
-        ? `<li class="root">${desc(k, i)} do ${btn(c)}</li>`
-        : `<li><span class="rel">${desc(k, i)} de</span> ${btn(c)} <span class="rel">(${years(P[c][2])})</span>${extra}</li>`;
-    }
-    html += '</ol>';
-    const branch = ch[ch.length - 2];
-    const n = paths[i];
-    html += `<p class="a-note">Pelo ramo de ${btn(branch)}.${n > 1 ? ` Chega ao Caetano por ${fmt(n)} caminhos diferentes: primos que casaram com primos.` : ''}</p>`;
+    html += `<p>Não descende do Caetano: entrou na família pelo casamento com ${ss.map(btn).join(' e ') || 'um descendente'}.</p>`;
+  } else if (x[6] > 0 && parents(i).length) {
+    html += `<p>${fem('Filho', i)} de ${parents(i).map(btn).join(' e ')}.</p>`;
   }
 
   const ss = spouses(i).filter(s => !(x[6] < 0 && P[s][6] >= 0));
-  if (ss.length) html += `<p class="a-note">${x[3] === 'F' ? 'Casada' : 'Casado'} com ${ss.map(btn).join(', ')}.</p>`;
+  if (ss.length) html += `<p>${x[3] === 'F' ? 'Casada' : 'Casado'} com ${ss.map(btn).join(', ')}.</p>`;
   const ks = kids[i];
-  if (ks.length) html += `<p class="a-kids">${ks.length} ${ks.length > 1 ? 'filhos' : 'filho'} no livro: ${ks.map(btn).join(', ')}.</p>`;
+  if (ks.length) html += `<p>${ks.length} ${ks.length > 1 ? 'filhos' : 'filho'} no livro: ${ks.map(btn).join(', ')}.</p>`;
 
   const d = x[6] >= 0 ? x[6] : null;
   html += '<div class="a-tools">';
@@ -218,32 +188,11 @@ function fromHash() {
   return false;
 }
 
-// ---------- figuras ----------
-const STORIES = {
-  'MMBY-6P8': 'Padre nascido em Caicó, vigário de Acari e de Caicó e diretor do Ginásio Diocesano Seridoense. Foi deputado federal a partir de 1946, senador de 1963 a 1966 e governador do Rio Grande do Norte de 1966 a 1971. Morreu no fim do mandato.',
-  'GHNX-7WG': $('#historia .story-text p:nth-of-type(2)')?.textContent,
-};
-
-function story(i) {
-  const x = P[i], ch = chain(i), k = ch.length - 1;
-  const line = ch.slice(1).map((c, n) => `${desc(n + 1, i)} de ${P[c][1]}`).join(', ');
-  const born = place(x[4]);
-  const auto = `${born ? `Nasceu em ${born}` : 'Nasceu no Seridó'}${x[2] ? `, ${years(x[2])}` : ''}. ` +
-    (kids[i].length ? `Teve ${kids[i].length} ${kids[i].length > 1 ? 'filhos registrados' : 'filho registrado'} no livro.` : 'Não tem filhos registrados no livro.') +
-    (paths[i] > 1 ? ` Descende do Caetano por ${fmt(paths[i])} caminhos.` : '');
-  $('#historia .story-text').innerHTML = `<h3>${esc(x[1])}</h3>
-    <p class="story-meta">${esc([years(x[2]), born, k ? `${desc(k, i)} de Caetano` : ''].filter(Boolean).join(' · '))}</p>
-    <p>${esc(STORIES[x[0]] || auto)}</p>
-    <p class="story-line">${esc(line.charAt(0).toUpperCase() + line.slice(1))}.</p>
-    <a class="link" href="#p=${esc(x[0])}">Abrir o assento completo</a>`;
-}
-
 // ---------- entradas ----------
 function reveal() {
-  const groups = document.querySelectorAll('.sheet, .stats, .figuras, .como');
-  groups.forEach(g => {
-    g.querySelectorAll(':scope h2, :scope p, :scope dl > div, :scope figure, :scope .tile, :scope .slip, :scope .bars > details:nth-child(-n+8), :scope .story').forEach((el, n) => {
-      el.classList.add('rv'); el.style.setProperty('--i', n % 8);
+  document.querySelectorAll('main > section:not(.hero), .pessoa, .pessoas-head, footer').forEach(g => {
+    g.querySelectorAll(':scope h2, :scope h3, :scope p, :scope figure, :scope .poster li, :scope .wall li, :scope details, :scope form').forEach((el, n) => {
+      el.classList.add('rv'); el.style.setProperty('--i', n % 6);
     });
   });
   if (!('IntersectionObserver' in window)) return document.querySelectorAll('.rv').forEach(e => e.classList.add('in'));
@@ -257,15 +206,7 @@ init();
 bindSearch($('#q'), $('#resultados'), i => open(i));
 document.addEventListener('click', e => {
   const go = e.target.closest('[data-go]');
-  if (go) { open(+go.dataset.go); return; }
-  const sp = e.target.closest('.spine');
-  if (sp) {
-    e.preventDefault();
-    document.querySelectorAll('.spine[aria-current]').forEach(s => s.removeAttribute('aria-current'));
-    sp.setAttribute('aria-current', 'true');
-    story(byId.get(sp.dataset.id));
-    $('#historia').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
+  if (go) open(+go.dataset.go);
 });
 addEventListener('hashchange', fromHash);
-fromHash();
+if (!fromHash()) render(byId.get('MMBY-6P8'));

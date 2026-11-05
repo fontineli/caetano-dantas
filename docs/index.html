@@ -3,188 +3,248 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Você é filho de quem? · Os descendentes do Cel. Caetano Dantas Correia</title>
-<meta name="description" content="Procure um parente entre os 43.256 descendentes falecidos do Cel. Caetano Dantas Correia, patriarca do Seridó, e veja o caminho até ele.">
+<title>A família do Caetano · 43.256 descendentes do Cel. Caetano Dantas Correia</title>
+<meta name="description" content="A família do Cel. Caetano Dantas Correia, patriarca do Seridó, em números, fotos e histórias: 43.256 descendentes, os nomes famosos e uma busca para achar o seu parente.">
+<meta name="theme-color" content="#1a1a1a">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=roundo@400,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
 <script src="data.js" defer></script>
 <script src="app.js" defer></script>
 </head>
 <body>
+<header class="top">
+  <a class="mark" href="#topo">Caetano Dantas</a>
+  <a class="btn" href="#busca">Procurar parente</a>
+</header>
+
 <main>
-  <header class="top">
-    <a class="mark" href="#topo" aria-label="Início">CD</a>
-    <nav aria-label="Seções">
-      <a href="#patriarca">O patriarca</a>
-      <a href="#ramos">Os 21 filhos</a>
-      <a href="#figuras">Figuras</a>
-      <a href="#lugares">Lugares</a>
-    </nav>
-    <a class="btn" href="#busca">Procurar parente</a>
-  </header>
-
-  <section class="hero" id="topo">
-    <article class="card" aria-labelledby="titulo">
-      <i class="sc sc-tl"></i><i class="sc sc-tr"></i>
-      <h1 id="titulo"><span>Você é filho</span> <span>de quem?</span></h1>
-      <p class="card-lead">Os 43.256 descendentes falecidos do Cel. Caetano Dantas Correia, até a 6ª geração, num só livro. Digite o nome de um parente que já se foi e veja o caminho dele até o patriarca.</p>
-      <p class="card-facts">Paraíba, 1710 <b class="dia" aria-hidden="true"></b> 21 filhos <b class="dia" aria-hidden="true"></b> Acari, 1797</p>
-
-      <form class="search" id="busca" role="search" onsubmit="return false">
-        <label for="q">Nome de um parente falecido</label>
-        <input id="q" type="search" autocomplete="off" placeholder="Ex.: José Dantas" aria-controls="resultados" aria-describedby="q-dica">
-        <p id="q-dica" class="hint">Pode ser pai, avó, bisavô… Basta parte do nome.</p>
-        <ul id="resultados" class="results" aria-live="polite"></ul>
-      </form>
-
-      <div id="assento" class="assento" tabindex="-1" hidden></div>
-      <noscript><p class="hint">A busca precisa de JavaScript. O resto do livro funciona sem ele.</p></noscript>
-    </article>
+  <section class="hero" id="topo" aria-labelledby="titulo">
+    <h1 id="titulo" class="hero-title"><span class="lines hero-ink"><span class="line"><span data-line style="--i:0">A família</span></span><span class="line"><span data-line style="--i:1">do Caetano</span></span></span><span class="lines hero-ghost" aria-hidden="true"><span class="line"><span data-line style="--i:0">A família</span></span><span class="line"><span data-line style="--i:1">do Caetano</span></span></span></h1>
+    <p class="hero-sub">43.256 descendentes do Cel. Caetano Dantas Correia, o patriarca do Seridó. Seis gerações em números, fotos e histórias.</p>
   </section>
 
-  <section class="intro sheet" id="patriarca" aria-labelledby="h-patriarca">
-    <div class="intro-top">
-      <h2 id="h-patriarca">O patriarca</h2>
-      <p>Segundo Câmara Cascudo, Caetano Dantas Correia veio de Pernambuco com as boiadas e a família e fundou, por volta de 1740, a Fazenda Carnaúba, no Seridó. Com Josefa de Araújo Pereira teve 21 filhos. A cidade que nasceu ali leva o nome da família: Carnaúba dos Dantas.</p>
+  <section class="chapter f-black patriarca" id="patriarca" aria-labelledby="h-patriarca">
+    <div class="pat-text">
+      <h2 id="h-patriarca" class="head">Tudo começou em 1710</h2>
+      <p class="lead">Caetano Dantas Correia veio de Pernambuco com as boiadas, conta Câmara Cascudo. Por volta de 1740 fundou a Fazenda Carnaúba, no Seridó.</p>
+      <p>Com Josefa de Araújo Pereira teve 21 filhos, entre 1754 e 1780. Morreu coronel de milícias em Acari, em 19 de julho de 1797. A fazenda virou cidade e ficou com o nome da família: Carnaúba dos Dantas.</p>
     </div>
-    <dl class="facts">
-      <div><dt>1710</dt><dd>Nasce. O FamilySearch registra Paraíba do Norte.</dd></div>
-      <div><dt>c. 1740</dt><dd>Funda a Fazenda Carnaúba, às margens do Carnaúba.</dd></div>
-      <div><dt>21 filhos</dt><dd>Com Josefa, entre 1754 e 1780.</dd></div>
-      <div><dt>19.7.1797</dt><dd>Morre em Acari, coronel de milícias.</dd></div>
-    </dl>
-    <div class="intro-pics">
-      <figure class="pic-wide">
-        <img src="img/casa-abandonada-no-interior-do-nordeste.jpg" width="1400" height="787" alt="Casa de taipa e tijolo em ruínas entre juremas secas, no sertão nordestino" loading="lazy">
-        <figcaption>Casa de fazenda no sertão. As do tempo de Caetano eram assim: taipa, tijolo e alpendre.</figcaption>
-      </figure>
-      <figure class="pic-tall">
-        <img src="img/br-230-em-junco-do-serido-pb.jpg" width="1400" height="1050" alt="Estrada atravessando serras baixas e caatinga no Seridó paraibano" loading="lazy">
-        <figcaption>O Seridó entre a Paraíba e o Rio Grande do Norte, caminho das boiadas.</figcaption>
-      </figure>
-    </div>
+    <figure class="pat-pic cut tilt-l">
+      <img src="img/casa-abandonada-no-interior-do-nordeste.jpg" width="1400" height="787" alt="Casa de taipa e tijolo em ruínas entre juremas secas, no sertão nordestino" loading="lazy">
+      <figcaption>Casa de fazenda no sertão: taipa, tijolo e alpendre.</figcaption>
+    </figure>
+    <figure class="pat-pic2 cut tilt-r">
+      <img src="img/bandeira-de-carnauba-dos-dantas-rn.jpg" width="1400" height="919" alt="Bandeira do município de Carnaúba dos Dantas" loading="lazy">
+      <figcaption>A bandeira de Carnaúba dos Dantas.</figcaption>
+    </figure>
   </section>
 
-  <section class="stats" aria-labelledby="h-stats">
-    <h2 id="h-stats"><span>Todo mundo</span> é primo.</h2>
-    <dl class="ledger">
-      <div><dt><span class="w">43.256</span><span class="f"></span></dt><dd>descendentes falecidos registrados, do primeiro filho, em 1754, à 6ª geração.</dd></div>
-      <div><dt><span class="w">50</span><span class="f">,9</span></dt><dd>por cento dos descendentes casados se casaram com outro descendente: 5.540 de 10.869.</dd></div>
-      <div><dt><span class="w">24.381</span><span class="f"></span></dt><dd>chegam ao Caetano por mais de um caminho. Há quem chegue por 25.</dd></div>
-      <div><dt><span class="w">44</span><span class="f">,1</span></dt><dd>por cento vêm de uma filha só, Micaela Dantas Pereira: 19.075 descendentes.</dd></div>
-      <div><dt><span class="w">6.144</span><span class="f"></span></dt><dd>levam Dantas como último sobrenome. Medeiros vem logo atrás, com 5.277.</dd></div>
-    </dl>
+  <section class="chapter f-green stat" aria-labelledby="h-total">
+    <h2 id="h-total" class="claim">De 21 filhos saíram</h2>
+    <p class="figure">43.256</p>
+    <p class="caption">descendentes já falecidos, do primeiro filho, em 1754, até a 6ª geração. Os vivos não entram na conta.</p>
   </section>
 
-  <section class="ramos sheet" id="ramos" aria-labelledby="h-ramos">
-    <div class="ramos-col">
-      <h2 id="h-ramos" class="giant">Ramos</h2>
-      <p class="ramos-note">Os 21 filhos de Caetano e Josefa, na ordem em que nasceram. Abra um ramo para ver os netos; cada nome abre o assento no topo da página.</p>
-      <div class="bars"><!--BARS--><details open><summary><span class="bar-name">Micaela Dantas Pereira</span><span class="bar-years">1754–1799</span><span class="bar-count" data-y="1754–1799">19.075 descendentes</span></summary><p class="bar-note">13 filhos registrados. <a href="#p=LCRT-GPM">Abrir o assento</a></p><ul><li><a href="#p=LZV2-VJ1">Joana Maria do Carmo</a><span>1768–1845</span></li><li><a href="#p=K2WH-QGB">João Dantas de Azevedo Maia</a><span>1771–1859</span></li><li><a href="#p=K1TW-TWH">Francisca Maria da Conceição</a><span>1772–1822</span></li><li><a href="#p=K1TW-T34">Maria Marcelina da Conceição</a><span>1774–1844</span></li><li><a href="#p=LBG1-GMV">José Dantas de Azevedo Maia</a><span>1776–1872</span></li><li><a href="#p=GST8-NCW">Anna Rosa Conceição</a><span>1780–1871</span></li><li><a href="#p=LCTN-DX5">Antônia Maria da Conceição</a><span>1781–1817</span></li><li><a href="#p=LCTN-DY6">Antonio Azevedo Maia Neto</a><span>1782–1866</span></li><li><a href="#p=GS2J-81D">Josefa Maria Dantas de Azevedo</a><span>1788–1870</span></li><li><a href="#p=G332-3BR">Francisco de Azevedo Maia</a><span>1790–1839</span></li><li><a href="#p=K1TW-TXG">Isabel Maria da Conceição</a><span>1790–1852</span></li><li><a href="#p=K1TW-R5P">Joaquim José de Azevedo</a><span>1792–1825</span></li><li><a href="#p=K23T-KKL">Capitão Caetano Dantas Azevedo</a><span>1797–1871</span></li></ul></details><details><summary><span class="bar-name">Capitão Simplício Francisco Dantas</span><span class="bar-years">1755–1828</span><span class="bar-count" data-y="1755–1828">3.526 descendentes</span></summary><p class="bar-note">19 filhos registrados. <a href="#p=K2NY-948">Abrir o assento</a></p><ul><li><a href="#p=L7NZ-3X5">João Dantas</a><span>1781–1795</span></li><li><a href="#p=G7CX-DNF">Florência Dantas</a><span>1789–1789</span></li><li><a href="#p=L7NZ-3ZL">Serafina Dantas</a><span>1790–1790</span></li><li><a href="#p=KJZX-MWN">José Manoel Dantas</a><span>1791–?</span></li><li><a href="#p=KJZX-M58">Manoel José Dantas</a><span>1793–1882</span></li><li><a href="#p=G1QN-3TC">João</a><span>1795–1795</span></li><li><a href="#p=K2NY-9D3">Maria do O do Nascimento</a><span>1798–?</span></li><li><a href="#p=K244-54N">Paulo Dantas</a><span>1801–1802</span></li><li><a href="#p=K23T-847">Anonimo</a><span>1802–1802</span></li><li><a href="#p=K2HL-S8V">Manoel Alberto Dantas</a><span>1803–1853</span></li><li><a href="#p=K2QG-ZXQ">Antonio Marcelino Dantas</a><span>1804–?</span></li><li><a href="#p=KK7L-K93">João Paulo Dantas</a><span>1807–1891</span></li><li><a href="#p=L7NZ-HDQ">Joaquina Senhorinha do Sacramento</a><span>1810–1838</span></li><li><a href="#p=GJDD-T88">Maria Dantas de Macedo</a><span>1812–?</span></li><li><a href="#p=GJD6-M24">Tomázia de Azevedo Dantas</a><span>1814–?</span></li><li><a href="#p=L7ZN-BZJ">Antonia Brasileira da Conceição</a><span>1816–1873</span></li><li><a href="#p=K244-522">Ana Violante Dantas</a><span>1817–?</span></li><li><a href="#p=K23T-Z1R">Andre Francisco Dantas</a><span>1819–?</span></li><li><a href="#p=K26Y-W13">Theresa Maria de Jesus</a><span>1820–?</span></li></ul></details><details><summary><span class="bar-name">Francisca Xavier Gomes Dantas</span><span class="bar-years">1755–1820</span><span class="bar-count" data-y="1755–1820">6.988 descendentes</span></summary><p class="bar-note">13 filhos registrados. <a href="#p=K23G-GN2">Abrir o assento</a></p><ul><li><a href="#p=K23T-ZPB">Anna Francisca de Medeiros</a><span>1780–1825</span></li><li><a href="#p=KGSN-3K1">João Crisóstomo de Medeiros Júnior</a><span>1780–1832</span></li><li><a href="#p=GFVX-TFN">Feliciana Maria da Conceição de Medeiros</a><span>1780–1861</span></li><li><a href="#p=L7N6-GY8">Joanna Maria da Conceição</a><span>1781–?</span></li><li><a href="#p=K23G-PG3">Maria José de Santana</a><span>1782–1837</span></li><li><a href="#p=KLH1-9SJ">Feliciana Maria da Conceição</a><span>1783–1861</span></li><li><a href="#p=G7CF-SR3">Joaquim Paulino Dantas de Medeiros</a><span>1790–1790</span></li><li><a href="#p=L7ND-NRC">Isabel Justa Rufina de Medeiros</a><span>1791–?</span></li><li><a href="#p=K2NY-FSP">Jose de Medeiros Dantas</a><span>1792–?</span></li><li><a href="#p=K2QR-NHY">Caetano Dantas de Medeiros</a><span>1793–?</span></li><li><a href="#p=GM3Y-5BF">Sebastião de Medeiros Dantas</a><span>1798–1878</span></li><li><a href="#p=K245-LM5">Manoel de Medeiros Dantas</a><span>1798–1889</span></li><li><a href="#p=K26Y-WJR">Antônia de Jesus Maria</a><span>1799–?</span></li></ul></details><details><summary><span class="bar-name">Gregório José Dantas Correia</span><span class="bar-years">1756–1840</span><span class="bar-count" data-y="1756–1840">2.549 descendentes</span></summary><p class="bar-note">12 filhos registrados. <a href="#p=LTTM-1VM">Abrir o assento</a></p><ul><li><a href="#p=K24W-6RK">Josefa Maria da Purificação</a><span>1803–1847</span></li><li><a href="#p=K24W-XDN">Maria Dantas Correa</a><span>1804–1804</span></li><li><a href="#p=9V5Q-Y89">Manoel Dantas Correa</a><span>1805–?</span></li><li><a href="#p=K2BQ-4ZQ">Félix Lúcio Dantas</a><span>1807–?</span></li><li><a href="#p=KVLN-VVH">Joaquim Felix Dantas</a><span>1810–1885</span></li><li><a href="#p=K23G-KBP">Maria Magdalena de Medeiros</a><span>1813–1851</span></li><li><a href="#p=G6DV-1MD">José da Annunciação Dantas</a><span>1814–1898</span></li><li><a href="#p=K2B3-YCT">Antônio de Medeiros Dantas</a><span>1816–1873</span></li><li><a href="#p=9V5Q-Y8Y">Francisco Dantas Correa</a><span>1817–?</span></li><li><a href="#p=L7N6-GWC">Anna Theresa de Jesus</a><span>1820–?</span></li><li><a href="#p=L7N6-LGV">Francisco Correa II</a><span>1821–?</span></li><li><a href="#p=K2B3-T2L">Francisca Dantas Correa</a><span>1827–?</span></li></ul></details><details><summary><span class="bar-name">Antonio Dantas Correa II</span><span class="bar-years">1757–1836</span><span class="bar-count" data-y="1757–1836">344 descendentes</span></summary><p class="bar-note">2 filhos registrados. <a href="#p=L788-KDB">Abrir o assento</a></p><ul><li><a href="#p=L788-KQC">Joana Dantas Corrêa</a><span>1780–?</span></li><li><a href="#p=G9BZ-T9V">Maria José da Anunciação</a><span>1799–1859</span></li></ul></details><details><summary><span class="bar-name">Ten. Cel. Caetano Dantas Correa II</span><span class="bar-years">1759–1830</span><span class="bar-count" data-y="1759–1830">12.684 descendentes</span></summary><p class="bar-note">28 filhos registrados. <a href="#p=LZX9-HPK">Abrir o assento</a></p><ul><li><a href="#p=GJT8-GT1">Antônio Dantas Correa I</a><span>1779–1836</span></li><li><a href="#p=KJZF-9J9">Pedro Francisco Dantas</a><span>1779–?</span></li><li><a href="#p=G3SB-RBD">Joana Maria da Conceição</a><span>1780–1835</span></li><li><a href="#p=LQ5R-YG5">Josefa Maria do Espírito Santo</a><span>1781–1835</span></li><li><a href="#p=LZZD-KG1">Tomázia Maria da Conceição</a><span>1784–?</span></li><li><a href="#p=K245-LV7">Manoel</a><span>1785–1788</span></li><li><a href="#p=LYLQ-TH6">Maria Joaquina da Conceição</a><span>1788–1832</span></li><li><a href="#p=GJT8-6T3">Ana</a><span>1789–1790</span></li><li><a href="#p=K245-LFN">José Dantas Correa</a><span>1790–?</span></li><li><a href="#p=GMFG-Q1G">Antônio Dantas Correa</a><span>1792–1878</span></li><li><a href="#p=K245-L3F">Anna Joaquina de Jesus</a><span>1792–?</span></li><li><a href="#p=KGSK-3DW">Sebastião Francisco Dantas Correia</a><span>1793–1871</span></li><li><a href="#p=G7CX-RXN">Anna</a><span>1797–1797</span></li><li><a href="#p=KJZF-9KL">Manoel Segundo</a><span>1798–1800</span></li><li><a href="#p=K265-HV2">Luzia Ursula de Medeiros</a><span>1800–1865</span></li><li><a href="#p=K2H2-BYB">Manoel Francisco Dantas Correa</a><span>1812–1882</span></li><li><a href="#p=K2H2-BSQ">Joaquim</a><span>1813–1814</span></li><li><a href="#p=PSK3-F6H">Maria Cesárea do Nascimento</a><span>1814–1879</span></li><li><a href="#p=KC6H-YLK">Joaquim II</a><span>1816–1823</span></li><li><a href="#p=GMFG-SNL">Inacio Correa</a><span>1817–?</span></li><li><a href="#p=GMFG-33D">Antônio José Dantas Correa</a><span>1818–1890</span></li><li><a href="#p=K2H2-YCZ">Manoela Maria do Nascimento</a><span>1819–1846</span></li><li><a href="#p=GMFL-Y68">João Francisco Dantas</a><span>1821–1891</span></li><li><a href="#p=GMFL-B32">Joaquim</a><span>1822–?</span></li><li><a href="#p=GMFG-846">Romana Maria da Conceição</a><span>1825–1851</span></li><li><a href="#p=GMFG-74R">Joaquim Francisco Dantas</a><span>1827–1860</span></li><li><a href="#p=GS8C-8ZN">Izabel Senhorinha do Nascimento</a><span>1829–?</span></li><li><a href="#p=G8YD-L2X">Manoel Pedro Dantas Correia</a><span>datas desconhecidas</span></li></ul></details><details><summary><span class="bar-name">Felix Dantas Corrêa</span><span class="bar-years">1761–1839</span><span class="bar-count" data-y="1761–1839">1 descendente</span></summary><p class="bar-note">1 filho registrado. <a href="#p=LTT9-SZ7">Abrir o assento</a></p><ul><li><a href="#p=LB25-VRZ">João</a><span>1786–?</span></li></ul></details><details><summary><span class="bar-name">Alexandre José Dantas</span><span class="bar-years">1762–1832</span><span class="bar-count" data-y="1762–1832">1.987 descendentes</span></summary><p class="bar-note">8 filhos registrados. <a href="#p=K2H2-1VY">Abrir o assento</a></p><ul><li><a href="#p=L7N6-V4J">Josefa Maria do Bonfim</a><span>1808–?</span></li><li><a href="#p=KLC9-WL8">Anna Violante da Silva</a><span>1816–1853</span></li><li><a href="#p=GSHT-HNG">Maria Rosalina da Silva Dantas</a><span>1818–1884</span></li><li><a href="#p=K2H2-16V">Alexandrina Umbelina da Silva</a><span>1820–?</span></li><li><a href="#p=K26G-KQN">Rita Cândida da Silva</a><span>1825–1865</span></li><li><a href="#p=K26G-XGH">Margarida Senhorinha de Jesus</a><span>1827–?</span></li><li><a href="#p=GNT3-KV8">Izabel Constância das Mercês</a><span>1830–?</span></li><li><a href="#p=G8PD-CYD">Alexandre José Dantas II</a><span>datas desconhecidas</span></li></ul></details><details><summary><span class="bar-name">Ana Dantas Pereira</span><span class="bar-years">1764–1822</span><span class="bar-count" data-y="1764–1822">1.823 descendentes</span></summary><p class="bar-note">5 filhos registrados. <a href="#p=K2NX-Z9S">Abrir o assento</a></p><ul><li><a href="#p=K2NX-ZS3">Maria Azevedo</a><span>1789–1790</span></li><li><a href="#p=GKGQ-JZ4">Tenente Coronel Manoel Gomes da Silva</a><span>1795–1855</span></li><li><a href="#p=9NP3-QS4">Antonia Leocadia de Azevedo</a><span>1800–1885</span></li><li><a href="#p=GSH5-XWD">Francisco Gomes da Silva Filho</a><span>1803–1844</span></li><li><a href="#p=PDPH-65X">Antonio Gomes da Silva</a><span>datas desconhecidas</span></li></ul></details><details><summary><span class="bar-name">Izabel Dantas Correa</span><span class="bar-years">1765–1790</span><span class="bar-count" data-y="1765–1790">0 descendentes</span></summary><p class="bar-note">0 filhos registrados. <a href="#p=GJT8-CGK">Abrir o assento</a></p><ul><li><span>Nenhum filho registrado no livro</span></li></ul></details><details><summary><span class="bar-name">Josefa de Araujo Pereira</span><span class="bar-years">1766–1819</span><span class="bar-count" data-y="1766–1819">754 descendentes</span></summary><p class="bar-note">3 filhos registrados. <a href="#p=GMP6-77H">Abrir o assento</a></p><ul><li><a href="#p=P7V2-CZ3">Manoel Pinto Dantas</a><span>1799–1874</span></li><li><a href="#p=GM3B-3PF">Anna Joaquina da Conceição</a><span>1800–1832</span></li><li><a href="#p=LY88-D13">Antonio Ferreira</a><span>1803–?</span></li></ul></details><details><summary><span class="bar-name">Silvestre José Dantas Correia</span><span class="bar-years">1768–1846</span><span class="bar-count" data-y="1768–1846">7.309 descendentes</span></summary><p class="bar-note">13 filhos registrados. <a href="#p=K2Q6-H2M">Abrir o assento</a></p><ul><li><a href="#p=LDH6-S5W">Maria Renovata dos Santos</a><span>1791–?</span></li><li><a href="#p=GS8K-QQC">Gregório José Dantas Correia</a><span>1797–?</span></li><li><a href="#p=G789-NQG">Silvestre</a><span>1799–1801</span></li><li><a href="#p=K2YG-6VG">João Damasceno Pereira</a><span>1799–1859</span></li><li><a href="#p=K2B3-68F">Maria Francisca da Conceiçao</a><span>1800–?</span></li><li><a href="#p=GX7N-2TT">Josefa de Araújo Pereira</a><span>1801–1822</span></li><li><a href="#p=K26P-41V">Antônio Dantas Corrêa</a><span>1802–1888</span></li><li><a href="#p=K2X4-25P">Pedro Celestino Dantas</a><span>1804–1898</span></li><li><a href="#p=KLHB-5RP">José Joaquim Dantas</a><span>1805–?</span></li><li><a href="#p=K2XD-5LV">Manoel do Nascimento Dantas</a><span>1808–?</span></li><li><a href="#p=K23T-GDW">Anna Rosa da Conceição</a><span>1814–1899</span></li><li><a href="#p=P39D-BNQ">Silvestre José Dantas Júnior</a><span>1815–?</span></li><li><a href="#p=P7X4-6GQ">Anna Rita da Conceição</a><span>datas desconhecidas</span></li></ul></details><details><summary><span class="bar-name">Manoel Antonio Dantas Correia</span><span class="bar-years">1769–1853</span><span class="bar-count" data-y="1769–1853">4.470 descendentes</span></summary><p class="bar-note">12 filhos registrados. <a href="#p=K24R-M9G">Abrir o assento</a></p><ul><li><a href="#p=K245-YGP">Manoel Mauricio Dantas</a><span>1791–1813</span></li><li><a href="#p=K245-YRK">Maria Magdalena de Medeiros</a><span>1795–1867</span></li><li><a href="#p=LQ5T-X33">Felix Jozé Dantas</a><span>1796–?</span></li><li><a href="#p=KLZQ-YJF">Joaquim Manoel Dantas</a><span>1797–1873</span></li><li><a href="#p=KK72-BT2">José Felisberto de Medeiros Dantas</a><span>1800–?</span></li><li><a href="#p=GQL7-X5R">Antônio Manoel Dantas Correia</a><span>1801–1878</span></li><li><a href="#p=K2TC-BRC">João Francisco De Medeiros</a><span>1803–?</span></li><li><a href="#p=K245-B59">Anna Joaquina de Medeiros</a><span>1804–1889</span></li><li><a href="#p=K245-1WL">Maria Constancia de Medeiros</a><span>1805–?</span></li><li><a href="#p=K245-17Q">João Valentino Dantas Pinagé</a><span>1806–1863</span></li><li><a href="#p=GSH5-XLJ">Isabel de Hungria de Medeiros</a><span>1810–1860</span></li><li><a href="#p=K245-19T">Manoel Salustiano de Maria Dantas</a><span>1816–1883</span></li></ul></details><details><summary><span class="bar-name">Clemência Dantas Pereira</span><span class="bar-years">1769–1833</span><span class="bar-count" data-y="1769–1833">3 descendentes</span></summary><p class="bar-note">2 filhos registrados. <a href="#p=LBFX-1WV">Abrir o assento</a></p><ul><li><a href="#p=PXMV-G4K">Antônio Alves da Nóbrega</a><span>1803–?</span></li><li><a href="#p=PXMV-JCQ">Isabel Alves da Nóbrega</a><span>1805–?</span></li></ul></details><details><summary><span class="bar-name">Maria Joaquina dos Santos</span><span class="bar-years">1770–1833</span><span class="bar-count" data-y="1770–1833">0 descendentes</span></summary><p class="bar-note">0 filhos registrados. <a href="#p=GHG4-9RK">Abrir o assento</a></p><ul><li><span>Nenhum filho registrado no livro</span></li></ul></details><details><summary><span class="bar-name">José Dantas Correia</span><span class="bar-years">1771–?</span><span class="bar-count" data-y="1771–?">456 descendentes</span></summary><p class="bar-note">12 filhos registrados. <a href="#p=G8B3-KXP">Abrir o assento</a></p><ul><li><a href="#p=GDF9-9GB">Antonio Dantas Correia</a><span>1804–1857</span></li><li><a href="#p=GDFQ-6RN">Maria Joaquina da Conceição</a><span>1807–?</span></li><li><a href="#p=GDXB-5JN">Rita Maria da Conceição</a><span>1807–?</span></li><li><a href="#p=G7Y4-98Q">Florêncio Dantas Correia</a><span>1810–1852</span></li><li><a href="#p=G8B3-4C6">Joaquina Maria da Conceição</a><span>1813–?</span></li><li><a href="#p=G61C-J13">Manoel Dantas Correia</a><span>1818–1909</span></li><li><a href="#p=GXJY-KML">Antônia Maria da Conceição</a><span>1820–?</span></li><li><a href="#p=GXV5-S26">Rosa Maria da Conceição</a><span>1820–?</span></li><li><a href="#p=G2ZK-SXB">Lucas</a><span>1832–?</span></li><li><a href="#p=GDJF-S5N">Ignacia</a><span>1834–?</span></li><li><a href="#p=GLH6-38J">Anna Vicência da Conceição</a><span>datas desconhecidas</span></li><li><a href="#p=GLHD-V2Z">Joanna Maria da Conceição</a><span>datas desconhecidas</span></li></ul></details><details><summary><span class="bar-name">Maximiana Dantas Pereira</span><span class="bar-years">1772–1836</span><span class="bar-count" data-y="1772–1836">587 descendentes</span></summary><p class="bar-note">2 filhos registrados. <a href="#p=KGCD-BNQ">Abrir o assento</a></p><ul><li><a href="#p=L7ND-N5N">Manoel Joaquim de Santana</a><span>1787–?</span></li><li><a href="#p=GXJG-71P">Antonio De Santana Dantas</a><span>1812–?</span></li></ul></details><details><summary><span class="bar-name">Izabel Dantas Correia</span><span class="bar-years">1774–1790</span><span class="bar-count" data-y="1774–1790">2 descendentes</span></summary><p class="bar-note">2 filhos registrados. <a href="#p=K2YM-W9Q">Abrir o assento</a></p><ul><li><a href="#p=K2YM-71R">Lourenço</a><span>1790–1790</span></li><li><a href="#p=G91B-BWF">Anna Thereza de Jesus</a><span>datas desconhecidas</span></li></ul></details><details><summary><span class="bar-name">José Antônio Dantas Corrêa</span><span class="bar-years">1775–1791</span><span class="bar-count" data-y="1775–1791">0 descendentes</span></summary><p class="bar-note">0 filhos registrados. <a href="#p=GSN2-8M7">Abrir o assento</a></p><ul><li><span>Nenhum filho registrado no livro</span></li></ul></details><details><summary><span class="bar-name">Antonia Dantas Pereira</span><span class="bar-years">1776–1836</span><span class="bar-count" data-y="1776–1836">691 descendentes</span></summary><p class="bar-note">1 filho registrado. <a href="#p=GJTP-SPH">Abrir o assento</a></p><ul><li><a href="#p=L1KY-KYJ">Izabel Miquilina Medeiros de Almeida</a><span>1807–?</span></li></ul></details><details><summary><span class="bar-name">Antonio Dantas Correia</span><span class="bar-years">1780–1853</span><span class="bar-count" data-y="1780–1853">261 descendentes</span></summary><p class="bar-note">1 filho registrado. <a href="#p=G7QP-ZY4">Abrir o assento</a></p><ul><li><a href="#p=GSD2-V73">Candida Esmeraldina Lucia Dantas</a><span>1814–1857</span></li></ul></details><!--/BARS--></div>
-    </div>
-  </section>
-
-  <section class="figuras" id="figuras" aria-labelledby="h-figuras">
-    <div class="figuras-head">
-      <h2 id="h-figuras">Gente de nome</h2>
-      <p>Bispo, governador, padres, coronéis e desembargador: 40 lombadas do mesmo livro. Escolha uma para ler a história.</p>
-    </div>
-    <ul class="shelf"><!--SPINES--><li><a class="spine spine-farda" href="#p=K2NY-948" data-id="K2NY-948"><span class="spine-name">Capitão Simplício Francisco Dantas</span><span class="spine-kind">Milícia · 1755</span></a></li><li><a class="spine spine-farda" href="#p=LZX9-HPK" data-id="LZX9-HPK"><span class="spine-name">Ten. Cel. Caetano Dantas Correa II</span><span class="spine-kind">Milícia · 1759</span></a></li><li><a class="spine spine-farda" href="#p=GKGQ-JZ4" data-id="GKGQ-JZ4"><span class="spine-name">Tenente Coronel Manoel Gomes da Silva</span><span class="spine-kind">Milícia · 1795</span></a></li><li><a class="spine spine-farda" href="#p=K23T-KKL" data-id="K23T-KKL"><span class="spine-name">Capitão Caetano Dantas Azevedo</span><span class="spine-kind">Milícia · 1797</span></a></li><li><a class="spine spine-farda" href="#p=GQMZ-82G" data-id="GQMZ-82G"><span class="spine-name">Capitão Antônio Baptista Santos</span><span class="spine-kind">Milícia · 1800</span></a></li><li><a class="spine spine-farda" href="#p=GHPM-YFX" data-id="GHPM-YFX"><span class="spine-name">Capitão Marcos de Araujo Pereira</span><span class="spine-kind">Milícia · 1801</span></a></li><li><a class="spine spine-farda" href="#p=GS8F-B28" data-id="GS8F-B28"><span class="spine-name">Major Manoel Baptista dos Santos</span><span class="spine-kind">Milícia · 1804</span></a></li><li><a class="spine spine-lei" href="#p=LCRT-R22" data-id="LCRT-R22"><span class="spine-name">Comendador Joaquim José Pereira da Cunha</span><span class="spine-kind">Leis e letras · 1805</span></a></li><li><a class="spine spine-farda" href="#p=KLH1-M67" data-id="KLH1-M67"><span class="spine-name">Capitão Joaquim José Dantas</span><span class="spine-kind">Milícia · 1806</span></a></li><li><a class="spine spine-farda" href="#p=GBM9-43P" data-id="GBM9-43P"><span class="spine-name">Alferes José Joaquim do Rego</span><span class="spine-kind">Milícia · 1807</span></a></li><li><a class="spine spine-farda" href="#p=GSBG-FD5" data-id="GSBG-FD5"><span class="spine-name">Capitão João José Dantas</span><span class="spine-kind">Milícia · 1811</span></a></li><li><a class="spine spine-farda" href="#p=LR3N-RVJ" data-id="LR3N-RVJ"><span class="spine-name">Major Silvestre de Azevedo Maia</span><span class="spine-kind">Milícia · 1814</span></a></li><li><a class="spine spine-igreja" href="#p=GYXV-TVM" data-id="GYXV-TVM"><span class="spine-name">Padre Francisco Adelino de Brito Dantas</span><span class="spine-kind">Igreja · 1825</span></a></li><li><a class="spine spine-igreja" href="#p=GFSV-7CN" data-id="GFSV-7CN"><span class="spine-name">Padre Francisco Rafael Fernandes</span><span class="spine-kind">Igreja · 1825</span></a></li><li><a class="spine spine-igreja" href="#p=LYXS-TGJ" data-id="LYXS-TGJ"><span class="spine-name">Padre Florentino Bezerra da Cunha</span><span class="spine-kind">Igreja · 1830</span></a></li><li><a class="spine spine-lei" href="#p=G7VJ-LWK" data-id="G7VJ-LWK"><span class="spine-name">Dr. Manoel José Fernandes</span><span class="spine-kind">Leis e letras · 1834</span></a></li><li><a class="spine spine-lei" href="#p=LQ5T-83D" data-id="LQ5T-83D"><span class="spine-name">Dr. Bartholomeu Leopoldino Dantas</span><span class="spine-kind">Leis e letras · 1836</span></a></li><li><a class="spine spine-igreja" href="#p=LKBC-26L" data-id="LKBC-26L"><span class="spine-name">Padre Joel Esdras Lins Fialho</span><span class="spine-kind">Igreja · 1842</span></a></li><li><a class="spine spine-lei" href="#p=LCCV-PB3" data-id="LCCV-PB3"><span class="spine-name">Dr. José Antônio Maria da Cunha Lima</span><span class="spine-kind">Leis e letras · 1851</span></a></li><li><a class="spine spine-lei" href="#p=KZ7N-Q2V" data-id="KZ7N-Q2V"><span class="spine-name">Desembargador Doutor José Bernardo de Medeiros Júnior</span><span class="spine-kind">Leis e letras · 1874</span></a></li><li><a class="spine spine-igreja" href="#p=KHYG-5MM" data-id="KHYG-5MM"><span class="spine-name">Padre Elesbao da Nobrega Gurgel de Oliveira</span><span class="spine-kind">Igreja · 1881</span></a></li><li><a class="spine spine-lei" href="#p=GX95-R4N" data-id="GX95-R4N"><span class="spine-name">Dr. Manoel Correia da Cunha</span><span class="spine-kind">Leis e letras · 1888</span></a></li><li><a class="spine spine-lei" href="#p=L15Y-1DJ" data-id="L15Y-1DJ"><span class="spine-name">Juiz Manoel Quirino de Azevedo Maia</span><span class="spine-kind">Leis e letras · 1889</span></a></li><li><a class="spine spine-lei" href="#p=G4W5-63L" data-id="G4W5-63L"><span class="spine-name">Dr. José Ansberto do Passo.</span><span class="spine-kind">Leis e letras · 1908</span></a></li><li><a class="spine spine-igreja" href="#p=MMBY-6P8" data-id="MMBY-6P8"><span class="spine-name">Monsenhor Walfredo Dantas Gurgel</span><span class="spine-kind">Igreja · 1908</span></a></li><li><a class="spine spine-igreja" href="#p=GHNX-7WG" data-id="GHNX-7WG"><span class="spine-name">Dom José Adelino Dantas</span><span class="spine-kind">Igreja · 1910</span></a></li><li><a class="spine spine-lei" href="#p=LNSB-7WX" data-id="LNSB-7WX"><span class="spine-name">Dr Ivan da Cunha Soares Londres</span><span class="spine-kind">Leis e letras · 1911</span></a></li><li><a class="spine spine-lei" href="#p=GC5H-S9K" data-id="GC5H-S9K"><span class="spine-name">Dr. Carlos Borges de Medeiros</span><span class="spine-kind">Leis e letras · 1913</span></a></li><li><a class="spine spine-lei" href="#p=GXKD-FG8" data-id="GXKD-FG8"><span class="spine-name">Dr. Lauro Bezerra da Trindade</span><span class="spine-kind">Leis e letras · 1915</span></a></li><li><a class="spine spine-lei" href="#p=LTJD-C7Y" data-id="LTJD-C7Y"><span class="spine-name">Dr Clóvis de Azevedo Maia</span><span class="spine-kind">Leis e letras · 1916</span></a></li><li><a class="spine spine-igreja" href="#p=GHWM-6M2" data-id="GHWM-6M2"><span class="spine-name">Monsenhor João Agripino Dantas</span><span class="spine-kind">Igreja · 1924</span></a></li><li><a class="spine spine-igreja" href="#p=GJBH-927" data-id="GJBH-927"><span class="spine-name">Irmã Julita De Medeiros Pessoa</span><span class="spine-kind">Igreja · 1926</span></a></li><li><a class="spine spine-lei" href="#p=G7KM-X69" data-id="G7KM-X69"><span class="spine-name">Dr. José Augusto Dantas</span><span class="spine-kind">Leis e letras · 1929</span></a></li><li><a class="spine spine-lei" href="#p=PXY2-BF9" data-id="PXY2-BF9"><span class="spine-name">Dr. Airton Dantas Wanderley</span><span class="spine-kind">Leis e letras · 1929</span></a></li><li><a class="spine spine-igreja" href="#p=GGC4-V6H" data-id="GGC4-V6H"><span class="spine-name">Monsenhor Antenor Salvino De Araújo</span><span class="spine-kind">Igreja · 1929</span></a></li><li><a class="spine spine-lei" href="#p=G4WR-XRP" data-id="G4WR-XRP"><span class="spine-name">Dr. Rildo do Passo.</span><span class="spine-kind">Leis e letras · 1931</span></a></li><li><a class="spine spine-igreja" href="#p=G6SR-896" data-id="G6SR-896"><span class="spine-name">Padre José Dantas Cortez</span><span class="spine-kind">Igreja · 1934</span></a></li><li><a class="spine spine-igreja" href="#p=GC7D-LL5" data-id="GC7D-LL5"><span class="spine-name">Pe. Francisco de Assis</span><span class="spine-kind">Igreja · 1934</span></a></li><li><a class="spine spine-lei" href="#p=GCQF-282" data-id="GCQF-282"><span class="spine-name">Dr. José Leny Dantas Bezerra</span><span class="spine-kind">Leis e letras · 1936</span></a></li><li><a class="spine spine-lei" href="#p=G8L4-ZVB" data-id="G8L4-ZVB"><span class="spine-name">Dr Ilo José do Couto Dantas</span><span class="spine-kind">Leis e letras · 1943</span></a></li><!--/SPINES--></ul>
-    <article class="story" id="historia" aria-live="polite">
-      <div class="story-text">
-        <h3>Dom José Adelino Dantas</h3>
-        <p class="story-meta">1910–1983 · São Vicente, RN · tetraneto de Caetano</p>
-        <p>Ordenado padre em Caicó em 1934, foi bispo de Caicó em 1952, depois de Garanhuns, em Pernambuco, e de Ruy Barbosa, na Bahia, até 1975. Em 1978 publicou <cite>O Coronel de Milícias Caetano Dantas Correia</cite>, a pesquisa sobre o próprio tetravô. Morreu em Carnaúba dos Dantas, a cidade que o patriarca fundou.</p>
-        <p class="story-line">Filho de Antônio Adelino Dantas, neto de José Adelino de Maria Dantas, bisneto de Maria Rosalina da Silva Dantas, trineto de Alexandre José Dantas, tetraneto do Cel. Caetano Dantas Correia.</p>
-        <a class="link" href="#p=GHNX-7WG">Abrir o assento completo</a>
-      </div>
-      <figure class="story-pic">
-        <img src="img/catedral-caico-rn-02.jpg" width="1400" height="937" alt="Fachada branca da Catedral de Sant'Ana, em Caicó" loading="lazy">
-        <figcaption>Catedral de Sant'Ana, Caicó. Sede da diocese que Dom José Adelino governou.</figcaption>
-      </figure>
-    </article>
-  </section>
-
-  <section class="lugares sheet" id="lugares" aria-labelledby="h-lugares">
-    <h2 id="h-lugares">Onde nasceram</h2>
-    <ul class="tiles">
-      <li class="tile t1"><img src="img/igreja-do-rosario-de-acari-08.jpg" width="1400" height="952" alt="Igreja do Rosário de Acari, caiada de branco com porta azul" loading="lazy">
-        <div class="strip"><p class="r1"><b>Acari</b><span>5.650 nascidos</span></p><p class="r2"><span>1754 a 1985</span><span>mais comum: Dantas</span></p></div></li>
-      <li class="tile t2"><img src="img/sobrado-prof-jesuino-azevedo.jpg" width="1400" height="967" alt="Sobrado colonial do Professor Jesuíno Azevedo, em Jardim do Seridó" loading="lazy">
-        <div class="strip"><p class="r1"><b>Jardim do Seridó</b><span>5.229 nascidos</span></p><p class="r2"><span>até 1992</span><span>mais comum: Azevedo</span></p></div></li>
-      <li class="tile t3"><img src="img/casal-de-rolinha-picui.jpg" width="1400" height="805" alt="Casal de rolinhas-picuí pousado num galho" loading="lazy">
-        <div class="strip"><p class="r1"><b>Picuí</b><span>3.087 nascidos</span></p><p class="r2"><span>1823 a 1980</span><span>nome de passarinho</span></p></div></li>
-      <li class="tile t4"><img src="img/catedral-caico-rn-02.jpg" width="1400" height="937" alt="Catedral de Sant'Ana de Caicó" loading="lazy">
-        <div class="strip"><p class="r1"><b>Caicó</b><span>3.796 nascidos</span></p><p class="r2"><span>cidade e diocese</span><span>mais comum: Araújo</span></p></div></li>
-      <li class="tile t2"><img src="img/florania-vista-aerea.jpg" width="1400" height="787" alt="Vista aérea de Florânia entre serras" loading="lazy">
-        <div class="strip"><p class="r1"><b>Florânia</b><span>1.441 nascidos</span></p><p class="r2"><span>1802 a 1967</span><span>mais comum: Medeiros</span></p></div></li>
-      <li class="tile t4"><img src="img/vista-currais-novos.jpg" width="1400" height="1192" alt="Vista de Currais Novos com casas e serra ao fundo" loading="lazy">
-        <div class="strip"><p class="r1"><b>Currais Novos</b><span>1.011 nascidos</span></p><p class="r2"><span>1824 a 1966</span><span>mais comum: Dantas</span></p></div></li>
-      <li class="tile t1"><img src="img/casa-de-cultura-popular-de-parelhas-rn.jpg" width="1400" height="1029" alt="Casa de Cultura Popular de Parelhas" loading="lazy">
-        <div class="strip"><p class="r1"><b>Parelhas</b><span>584 nascidos</span></p><p class="r2"><span>1825 a 1974</span><span>mais comum: Dantas</span></p></div></li>
-      <li class="tile t3"><img src="img/bandeira-de-carnauba-dos-dantas-rn.jpg" width="1400" height="919" alt="Bandeira do município de Carnaúba dos Dantas" loading="lazy">
-        <div class="strip"><p class="r1"><b>Carnaúba dos Dantas</b><span>561 nascidos</span></p><p class="r2"><span>desde 1779</span><span>a terra do Caetano</span></p></div></li>
+  <section class="chapter f-bone geracoes" aria-labelledby="h-ger">
+    <h2 id="h-ger" class="claim">Geração por geração</h2>
+    <ul class="poster">
+      <li><span>Filhos</span><b>21</b></li>
+      <li><span>Netos</span><b>149</b></li>
+      <li><span>Bisnetos</span><b>819</b></li>
+      <li><span>Trinetos</span><b>3.569</b></li>
+      <li><span>Tetranetos</span><b>12.844</b></li>
+      <li><span>Pentanetos</span><b>25.854</b></li>
     </ul>
   </section>
 
-  <section class="como" aria-labelledby="h-como">
-    <div class="como-text">
-      <h2 id="h-como">Como achar o seu lugar</h2>
-      <p>O livro só guarda quem já faleceu. Então o caminho começa pelos mais velhos da sua casa: o nome completo de um avô ou bisavô basta.</p>
-      <figure class="como-pic">
-        <img src="img/acari-rn-brasil.jpg" width="1400" height="1050" alt="Rua de Acari com casas baixas e a serra ao fundo" loading="lazy">
-        <figcaption>Acari, onde Caetano morreu e onde nasceram 5.650 dos seus descendentes.</figcaption>
-      </figure>
-    </div>
-    <div class="slip">
-      <h3>Em casa</h3>
-      <p class="row"><span>Pergunte o nome completo de um avô falecido</span><i></i><span>5 min</span></p>
-      <p class="row"><span>Anote a cidade e o ano em que nasceu</span><i></i><span>2 min</span></p>
-      <h3>Na busca</h3>
-      <p class="row"><span>Digite parte do nome no cartão</span><i></i><span>10 s</span></p>
-      <p class="row"><span>Confira pelos pais e pelo ano</span><i></i><span>1 min</span></p>
-      <p class="row"><span>Clique nos filhos para descer até você</span><i></i><span>1 min</span></p>
-      <h3>Na conversa</h3>
-      <p class="row"><span>Compare com o primo e veja o grau</span><i></i><span>10 s</span></p>
-      <p class="row"><span>Mande o link no grupo da família</span><i></i><span>10 s</span></p>
-      <p class="row total"><span>Seu caminho até o Caetano</span><span>10 min</span></p>
-    </div>
+  <section class="chapter f-yellow stat stat-right" aria-labelledby="h-nome">
+    <h2 id="h-nome" class="claim">O nome mais comum</h2>
+    <p class="figure">Maria</p>
+    <p class="caption">5.559 Marias entre os descendentes. Depois vêm José (2.828), Manoel (2.216) e Francisco (1.868).</p>
   </section>
 
-  <section class="faq sheet" aria-labelledby="h-faq">
-    <h2 id="h-faq">Perguntas de família</h2>
-    <div class="faq-text">
-      <p><b>Por que só tem gente falecida?</b> A árvore do FamilySearch mostra publicamente só quem já morreu. Vivos ficam privados, e é bom que fiquem.</p>
-      <p><b>De onde vieram esses nomes?</b> Da árvore pública do FamilySearch, a partir do Cel. Caetano Dantas Correia (LQ52-8X9), coletada em 5 de novembro de 2026. Quem montou essa árvore foram gerações de pesquisadores, muitos deles da própria família.</p>
-      <p><b>Por que para na 6ª geração?</b> Foi até onde a coleta chegou: 43.256 descendentes. Seus pais ou avós podem estar logo abaixo de alguém daqui.</p>
-      <p><b>Achei um erro. Como corrijo?</b> Corrija direto no FamilySearch, que é a fonte; o botão no assento leva à pessoa certa. Na próxima coleta o livro se atualiza.</p>
-      <p><b>Meu bisavô não aparece.</b> Tente sem acento, só com o primeiro e o último nome, ou procure pelo pai dele. Muitos registros antigos trazem só “Maria” ou “José”.</p>
-      <p><b>Por que a mesma pessoa vem de dois ramos?</b> Porque primos casavam com primos. Metade dos casamentos do livro é entre descendentes, e o assento conta por quantos caminhos alguém chega ao Caetano.</p>
-      <p><b>O que quer dizer pentaneto?</b> Filho, neto, bisneto, trineto, tetraneto, pentaneto: cada palavra é uma geração a mais entre você e o patriarca.</p>
-      <p><b>Caetano nasceu na Paraíba ou em Pernambuco?</b> O FamilySearch registra Paraíba do Norte; Câmara Cascudo escreve que ele veio de Pernambuco. Fica a pergunta para a próxima festa.</p>
-      <p><b>Posso mandar para a família?</b> Pode. Todo assento tem um link próprio, e o grau de parentesco entre duas pessoas também.</p>
+  <section class="chapter f-coral stat" aria-labelledby="h-primos">
+    <h2 id="h-primos" class="claim">Todo mundo é primo</h2>
+    <p class="figure">50,9<sup>%</sup></p>
+    <p class="caption">dos descendentes casados casaram com outro descendente: 5.540 de 10.869. Por isso 24.381 pessoas aparecem em mais de um ramo da árvore.</p>
+  </section>
+
+  <section class="pessoas" id="famosos" aria-labelledby="h-famosos">
+    <div class="chapter f-black pessoas-head">
+      <h2 id="h-famosos" class="display">Os famosos</h2>
+      <p class="lead">Entre os 43 mil há 22 capitães, 18 doutores, 10 majores, 7 padres e um bispo. Estes entraram para a história do Rio Grande do Norte.</p>
+    </div>
+    <!--PESSOAS-->
+    <article class="pessoa" aria-labelledby="p-MK74-BJY">
+      <figure class="p-pic p-small"><img src="img/pessoas/MK74-BJY.jpg" width="215" height="298" alt="Retrato de Tonheca Dantas" loading="lazy"></figure>
+      <div class="p-text">
+        <p class="p-hook">A BBC tocou sua valsa na 2ª Guerra</p>
+        <h3 id="p-MK74-BJY">Tonheca Dantas</h3>
+        <p class="p-meta">Compositor e maestro · 1871–1940 · Carnaúba de Baixo, Acari (RN) · trineto do Caetano</p>
+        <p>Autodidata, regeu a banda do Batalhão de Segurança de Natal (hoje banda da PM do RN) a partir de 1898 e a banda dos Bombeiros de Belém entre 1903 e 1910. Deixou mais de mil composições. Sua valsa Royal Cinema, feita para abrir as sessões de um cinema de Natal, foi transmitida pela Rádio BBC de Londres durante a Segunda Guerra Mundial, anunciada como de autor desconhecido.</p>
+        <p><a class="link" href="#p=MK74-BJY">Ver na árvore</a> · <a class="link" href="https://pt.wikipedia.org/wiki/Tonheca_Dantas">Wikipédia</a></p>
+      </div>
+    </article>
+    <article class="pessoa" aria-labelledby="p-GD8P-FTC">
+      <figure class="p-pic"><img src="img/pessoas/GD8P-FTC.jpg" width="800" height="1344" alt="Retrato de Donatilla Dantas" loading="lazy"></figure>
+      <div class="p-text">
+        <p class="p-hook">De menina de rua a poeta de Brasília</p>
+        <h3 id="p-GD8P-FTC">Donatilla Dantas</h3>
+        <p class="p-meta">Poeta e arquivista · 1913–1994 · Carnaúba dos Dantas (RN) · tetraneta do Caetano</p>
+        <p>Órfã de pai, fugiu de casa ainda criança e viveu na rua até ser acolhida por uma família em João Pessoa. No Rio de Janeiro, ganhou três concursos de poesia em 1955 e, como funcionária do TSE, participou da mudança da capital para Brasília. Seu primeiro livro, Candango (1959), homenageia os operários da nova capital, e a biblioteca que ela fundou em Carnaúba dos Dantas leva seu nome.</p>
+        <p><a class="link" href="#p=GD8P-FTC">Ver na árvore</a> · <a class="link" href="https://pt.wikipedia.org/wiki/Donatilla_Dantas">Wikipédia</a></p>
+      </div>
+    </article>
+    <article class="pessoa" aria-labelledby="p-MMBY-6P8">
+      <figure class="p-pic"><img src="img/pessoas/MMBY-6P8.jpg" width="424" height="619" alt="Retrato de Monsenhor Walfredo Gurgel" loading="lazy"></figure>
+      <div class="p-text">
+        <p class="p-hook">Governou o RN de 1966 a 1971</p>
+        <h3 id="p-MMBY-6P8">Monsenhor Walfredo Gurgel</h3>
+        <p class="p-meta">Padre e governador do RN · 1908–1971 · Caicó (RN) · tetraneto do Caetano</p>
+        <p>Padre de Caicó, fundou e dirigiu o Colégio Diocesano Seridoense e foi deputado federal pelo PSD a partir de 1945. Eleito vice-governador em 1960 na chapa de Aluízio Alves, renunciou ao ser eleito senador em 1962. Em 1965 venceu a eleição para governador, a última pelo voto direto no estado até 1982.</p>
+        <p><a class="link" href="#p=MMBY-6P8">Ver na árvore</a> · <a class="link" href="https://pt.wikipedia.org/wiki/Walfredo_Gurgel">Wikipédia</a></p>
+      </div>
+    </article>
+    <article class="pessoa" aria-labelledby="p-K24R-MJQ">
+      <figure class="p-pic p-small"><img src="img/pessoas/K24R-MJQ.jpg" width="182" height="276" alt="Retrato de Barão do Açu" loading="lazy"></figure>
+      <div class="p-text">
+        <p class="p-hook">Ministro do Supremo do Império</p>
+        <h3 id="p-K24R-MJQ">Barão do Açu</h3>
+        <p class="p-meta">Juiz, ministro do Supremo e barão · 1818–1896 · Campo Grande (RN) · bisneto do Caetano</p>
+        <p>Formado em Direito em Olinda aos 21 anos, em 1839, foi juiz em Açu por 15 anos e desembargador da Relação de Ouro Preto a partir de 1874. Governou a província do Rio Grande do Norte em 1868 como vice-presidente. Em 1886 o imperador o nomeou ministro do Supremo Tribunal de Justiça, e em 1888 recebeu o título de barão do Açu, o único.</p>
+        <p><a class="link" href="#p=K24R-MJQ">Ver na árvore</a> · <a class="link" href="https://pt.wikipedia.org/wiki/Lu%C3%ADs_Gonzaga_de_Brito_Guerra">Wikipédia</a></p>
+      </div>
+    </article>
+    <article class="pessoa" aria-labelledby="p-L1MK-8CG">
+      <figure class="p-pic"><img src="img/pessoas/L1MK-8CG.jpg" width="800" height="1010" alt="Retrato de Cortez Pereira" loading="lazy"></figure>
+      <div class="p-text">
+        <p class="p-hook">42º governador do Rio Grande do Norte</p>
+        <h3 id="p-L1MK-8CG">Cortez Pereira</h3>
+        <p class="p-meta">Governador do RN · 1924–2004 · Currais Novos (RN) · tetraneto do Caetano</p>
+        <p>Professor de Direito, foi escolhido governador do RN pelo presidente Médici em 1970. Rompeu com a cúpula do regime e teve os direitos políticos cassados em 1976, com base no AI-5, e foi aposentado à força da UFRN em 1977. Anistiado, voltou à universidade em 1980 e morreu em 2004 como prefeito de Serra do Mel, eleito em 2000.</p>
+        <p><a class="link" href="#p=L1MK-8CG">Ver na árvore</a> · <a class="link" href="https://pt.wikipedia.org/wiki/Cortez_Pereira">Wikipédia</a></p>
+      </div>
+    </article>
+    <article class="pessoa" aria-labelledby="p-GHNX-7WG">
+      <figure class="p-pic"><img src="img/pessoas/GHNX-7WG.jpg" width="800" height="1091" alt="Retrato de Dom José Adelino Dantas" loading="lazy"></figure>
+      <div class="p-text">
+        <p class="p-hook">Bispo em três estados</p>
+        <h3 id="p-GHNX-7WG">Dom José Adelino Dantas</h3>
+        <p class="p-meta">Bispo de Caicó, Garanhuns e Rui Barbosa · 1910–1983 · São Vicente (RN) · tetraneto do Caetano</p>
+        <p>Um de 16 filhos de uma família de agricultores, entrou no seminário de Natal em 1925 levado pelo próprio bispo. Foi sagrado bispo de Caicó em 1952, transferido para Garanhuns (PE) em 1957 e para Rui Barbosa (BA) em 1967. Renunciou em 1975 e passou os últimos anos em Carnaúba dos Dantas, onde morreu.</p>
+        <p><a class="link" href="#p=GHNX-7WG">Ver na árvore</a> · <a class="link" href="https://pt.wikipedia.org/wiki/Jos%C3%A9_Adelino_Dantas">Wikipédia</a></p>
+      </div>
+    </article>
+    <article class="pessoa" aria-labelledby="p-KPW5-JS4">
+      <figure class="p-pic"><img src="img/pessoas/KPW5-JS4.jpg" width="394" height="457" alt="Retrato de Olavo de Medeiros Filho" loading="lazy"></figure>
+      <div class="p-text">
+        <p class="p-hook">Escreveu Velhas Famílias do Seridó</p>
+        <h3 id="p-KPW5-JS4">Olavo de Medeiros Filho</h3>
+        <p class="p-meta">Historiador e genealogista · 1934–2005 · Caicó (RN) · pentaneto do Caetano</p>
+        <p>Bancário do Banco do Brasil de 1952 a 1982, dedicou a vida a cartórios, igrejas e arquivos do Seridó. Publicou 31 obras, a primeira delas Velhas Famílias do Seridó (1981), que reconstitui as famílias de patriarcas como Caetano Dantas Correia, seu antepassado. Foi membro da Academia Norte-rio-grandense de Letras e o principal autor sobre os holandeses no Rio Grande do Norte.</p>
+        <p><a class="link" href="#p=KPW5-JS4">Ver na árvore</a> · <a class="link" href="https://pt.wikipedia.org/wiki/Olavo_de_Medeiros_Filho">Wikipédia</a></p>
+      </div>
+    </article>
+    <article class="pessoa" aria-labelledby="p-9N9T-BBK">
+      <figure class="p-nopic"><span>83</span><figcaption>dobrados compostos</figcaption></figure>
+      <div class="p-text">
+        <p class="p-hook">83 dobrados entre uma colheita e outra</p>
+        <h3 id="p-9N9T-BBK">Felinto Lúcio Dantas</h3>
+        <p class="p-meta">Compositor e maestro · 1898–1986 · Carnaúba dos Dantas (RN) · tetraneto do Caetano</p>
+        <p>Agricultor a vida inteira, compôs mais de 200 peças: 83 dobrados, 42 valsas e 36 obras sacras, além do hino de Carnaúba dos Dantas. Escreveu o primeiro dobrado, Estreia, em 1917, aos 19 anos, e um deles se chama Caetano Dantas. Regeu a banda filarmônica de Acari, que hoje leva seu nome.</p>
+        <p><a class="link" href="#p=9N9T-BBK">Ver na árvore</a> · <a class="link" href="https://pt.wikipedia.org/wiki/Felinto_L%C3%BAcio_Dantas">Wikipédia</a></p>
+      </div>
+    </article>
+    <article class="pessoa" aria-labelledby="p-K245-17Q">
+      <figure class="p-nopic"><span>1838</span><figcaption>o ano em que governou</figcaption></figure>
+      <div class="p-text">
+        <p class="p-hook">Governou a província em 1838</p>
+        <h3 id="p-K245-17Q">João Valentino Dantas Pinajé</h3>
+        <p class="p-meta">Presidente da província do RN · 1808–1863 · Acari (RN) · neto do Caetano</p>
+        <p>Neto de Caetano Dantas Correia, formou-se bacharel e presidiu a província do Rio Grande do Norte de 3 de julho a 3 de novembro de 1838. Como vice-presidente, abriu a Assembleia Legislativa provincial em 7 de setembro de 1838. Morreu em Fortaleza em 1863.</p>
+        <p><a class="link" href="#p=K245-17Q">Ver na árvore</a> · <a class="link" href="https://pt.wikipedia.org/wiki/Jo%C3%A3o_Valentino_Dantas_Pinaj%C3%A9">Wikipédia</a></p>
+      </div>
+    </article>
+    <!--/PESSOAS-->
+  </section>
+
+  <section class="chapter f-black stat stat-right" aria-labelledby="h-micaela">
+    <h2 id="h-micaela" class="claim">Uma filha, quase metade</h2>
+    <p class="figure">44<sup>%</sup></p>
+    <p class="caption">de todos os descendentes vêm de Micaela Dantas Pereira (1754–1799), a primogênita: 19.075 pessoas. O segundo maior ramo, do Ten. Cel. Caetano Dantas Correa II, tem 12.684.</p>
+  </section>
+
+  <section class="chapter f-bone lugares" id="lugares" aria-labelledby="h-lugares">
+    <h2 id="h-lugares" class="display">Onde nasceram</h2>
+    <ul class="wall">
+      <li class="w-word f-coral"><b>Acari</b><span>5.650 nascidos</span></li>
+      <li class="w-pic"><img src="img/igreja-do-rosario-de-acari-08.jpg" width="1400" height="952" alt="Igreja do Rosário de Acari, caiada de branco com porta azul" loading="lazy"></li>
+      <li class="w-word f-green"><b>Jardim</b><span>5.229 em Jardim do Seridó</span></li>
+      <li class="w-pic"><img src="img/sobrado-prof-jesuino-azevedo.jpg" width="1400" height="967" alt="Sobrado colonial do Professor Jesuíno Azevedo, em Jardim do Seridó" loading="lazy"></li>
+      <li class="w-pic"><img src="img/catedral-caico-rn-02.jpg" width="1400" height="937" alt="Fachada branca da Catedral de Sant'Ana, em Caicó" loading="lazy"></li>
+      <li class="w-word f-yellow"><b>Caicó</b><span>3.796 nascidos</span></li>
+      <li class="w-pic"><img src="img/casal-de-rolinha-picui.jpg" width="1400" height="805" alt="Casal de rolinhas-picuí pousado num galho" loading="lazy"></li>
+      <li class="w-word f-black"><b>Picuí</b><span>3.087 nascidos</span></li>
+      <li class="w-word f-green"><b>Florânia</b><span>1.441 nascidos</span></li>
+      <li class="w-pic"><img src="img/florania-vista-aerea.jpg" width="1400" height="787" alt="Vista aérea de Florânia entre serras" loading="lazy"></li>
+      <li class="w-word f-coral"><b>Currais</b><span>1.011 em Currais Novos</span></li>
+      <li class="w-pic"><img src="img/vista-currais-novos.jpg" width="1400" height="1192" alt="Vista de Currais Novos com casas e serra ao fundo" loading="lazy"></li>
+      <li class="w-pic"><img src="img/casa-de-cultura-popular-de-parelhas-rn.jpg" width="1400" height="1029" alt="Casa de Cultura Popular de Parelhas" loading="lazy"></li>
+      <li class="w-word f-black"><b>Parelhas</b><span>584 nascidos</span></li>
+      <li class="w-pic"><img src="img/caatinga.jpg" width="1400" height="1050" alt="Caatinga verde depois da chuva" loading="lazy"></li>
+      <li class="w-word f-yellow"><b>Carnaúba</b><span>561 na terra do Caetano</span></li>
+    </ul>
+  </section>
+
+  <section class="chapter f-green stat" aria-labelledby="h-ano">
+    <h2 id="h-ano" class="claim">O ano mais cheio</h2>
+    <p class="figure">1918</p>
+    <p class="caption">779 descendentes nasceram em 1918, mais que em qualquer outro ano. A década de 1910 inteira teve 6.916.</p>
+  </section>
+
+  <section class="busca" id="busca" aria-labelledby="h-busca">
+    <img class="busca-bg" src="img/acari-rn-brasil.jpg" width="1400" height="1050" alt="" loading="lazy">
+    <div class="busca-col">
+      <h2 id="h-busca" class="head">Ache o seu parente</h2>
+      <p class="lead">Digite o nome de um avô, bisavó ou tio que já faleceu. Basta parte do nome.</p>
+      <form class="search" role="search" onsubmit="return false">
+        <label for="q">Nome de um parente falecido</label>
+        <input id="q" type="search" autocomplete="off" placeholder="Ex.: José Dantas" aria-controls="resultados">
+        <ul id="resultados" class="results" aria-live="polite"></ul>
+      </form>
+      <noscript><p>A busca precisa de JavaScript.</p></noscript>
+    </div>
+    <div id="assento" class="assento" tabindex="-1" hidden></div>
+  </section>
+
+  <section class="chapter f-bone faq" aria-labelledby="h-faq">
+    <h2 id="h-faq" class="head">Perguntas de família</h2>
+    <div class="tiles">
+      <details name="faq"><summary>Por que só tem gente falecida?</summary><p>A árvore do FamilySearch mostra publicamente só quem já morreu. Os vivos ficam privados, e é bom que fiquem.</p></details>
+      <details name="faq"><summary>De onde vieram esses nomes?</summary><p>Da árvore pública do FamilySearch, a partir do Cel. Caetano Dantas Correia (LQ52-8X9), coletada em 5 de novembro de 2026. Quem montou a árvore foram gerações de pesquisadores, muitos da própria família.</p></details>
+      <details name="faq"><summary>Meu bisavô não aparece. E agora?</summary><p>Tente sem acento, só com o primeiro e o último nome, ou procure pelo pai dele. Muitos registros antigos trazem só “Maria” ou “José”. A coleta parou na 6ª geração.</p></details>
+      <details name="faq"><summary>Achei um erro. Como corrijo?</summary><p>Corrija direto no FamilySearch, que é a fonte. O botão em cada pessoa leva ao registro certo. Na próxima coleta o site se atualiza.</p></details>
+      <details name="faq"><summary>O que quer dizer pentaneto?</summary><p>Filho, neto, bisneto, trineto, tetraneto, pentaneto: cada palavra é uma geração a mais entre a pessoa e o patriarca.</p></details>
+      <details name="faq"><summary>Caetano era da Paraíba ou de Pernambuco?</summary><p>O FamilySearch registra Paraíba do Norte; Câmara Cascudo escreve que ele veio de Pernambuco. Fica a pergunta para a próxima festa.</p></details>
+      <details name="faq"><summary>Posso mandar para a família?</summary><p>Pode. Cada pessoa tem um link próprio, e a comparação entre duas pessoas também.</p></details>
     </div>
   </section>
 </main>
 
-<footer class="back">
-  <div class="postcard">
-    <div class="pc-msg">
-      <h2>Até a festa de Sant'Ana</h2>
-      <p>Este livro é feito por um descendente, a partir da árvore pública do FamilySearch. Se você tem uma história de algum desses nomes, uma foto antiga ou uma correção, mande. A próxima edição fica mais completa com ela.</p>
-    </div>
-    <div class="pc-addr">
-      <img class="stamp" src="img/caatinga.jpg" width="1400" height="1050" alt="Caatinga verde depois da chuva" loading="lazy">
-      <ul>
-        <li><a href="https://www.familysearch.org/tree/person/details/LQ52-8X9">Caetano no FamilySearch</a></li>
-        <li><a href="#contato" id="contato">Mandar uma história</a></li>
-        <li><a href="#busca">Procurar um parente</a></li>
-        <li>Carnaúba dos Dantas, Seridó, RN</li>
-      </ul>
-    </div>
-    <p class="imprint">Fotos: GLandovsky, Mateus Costa S, DanWBR, Arlei Antunes, Allan Patrick, Iago Felipe de Souza, Marcos Elias de Oliveira Júnior, Prefeitura e “O desembargador”, via Wikimedia Commons (CC BY-SA 4.0, CC BY-SA 2.0, CC0). História: Câmara Cascudo, <cite>Nomes da Terra</cite>; Dom José Adelino Dantas, <cite>O Coronel de Milícias Caetano Dantas Correia</cite> (1978).</p>
+<footer class="chapter f-coral fim">
+  <div class="fim-top">
+    <p>Feito por um descendente, a partir da árvore pública do FamilySearch.</p>
+    <p>Carnaúba dos Dantas, Seridó, RN</p>
+    <a class="link" href="#topo">Voltar ao início</a>
+  </div>
+  <h2 class="display fim-title">Até a festa de Sant'Ana</h2>
+  <div class="fim-meta">
+    <p><a class="link" href="https://www.familysearch.org/tree/person/details/LQ52-8X9">Caetano no FamilySearch</a></p>
+    <p class="imprint"><!--CREDITS-->Fotos dos lugares, via Wikimedia Commons: Igreja do Rosário de Acari 08, GLandovsky (CC BY-SA 4.0); Sobrado Prof. Jesuíno Azevedo, GLandovsky (CC BY-SA 4.0); Catedral Caicó RN 02, GLandovsky (CC0); Vista Currais Novos, Mateus Costa S (CC0); Florânia (Vista Aérea), DanWBR (CC BY-SA 4.0); Casa de Cultura Popular de Parelhas-RN 02, GLandovsky (CC BY-SA 4.0); Caatinga, Allan Patrick from Mossoró, Brasil (CC BY-SA 2.0); Casa abandonada no interior do Nordeste, Iago Felipe de Souza (CC0); Acari, RN, Brasil, allanpatrick (CC BY-SA 2.0); Casal de Rolinha-picuí, Arlei antunes (CC BY-SA 4.0); Bandeira de CARNAÚBA DOS DANTAS - RN, O desembargador (CC0). Retratos, via Wikimedia Commons: Tonheca Dantas: Autor desconhecido (acervo particular) (CC BY-SA 3.0); Donatilla Dantas: Arthurmdrs (acervo da Biblioteca Municipal Donatilla Dantas) (CC BY-SA 4.0); Monsenhor Walfredo Gurgel: Rosado Silva (CC BY-SA 4.0); Barão do Açu: Autor desconhecido (STF) (Domínio público); Cortez Pereira: Autor desconhecido (Arquivo Nacional, Fundo Agência Nacional) (Domínio público); Dom José Adelino Dantas: Arthurmdrs (CC BY-SA 4.0); Olavo de Medeiros Filho: George Nóbrega de Medeiros (CC BY-SA 4.0).<!--/CREDITS--> História: Câmara Cascudo, <cite>Nomes da Terra</cite>; Dom José Adelino Dantas, <cite>O Coronel de Milícias Caetano Dantas Correia</cite> (1978).</p>
+    <p>2026</p>
   </div>
 </footer>
 </body>
